@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjay Nair</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full bg-gray-50">
+  <div class="fixed inset-0 bg-center bg-no-repeat bg-contain opacity-10 z-[-1]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Logo_placeholder.svg');"></div>
+
+  <section class="container mx-auto text-center py-12">
+    <div class="flex flex-col items-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="That's me!" class="h-[205px] w-[205px] rounded-full border-4 border-black">
+      <h1 class="text-4xl font-bold mt-4">Sanjay Nair</h1>
+      <h4 class="text-xl mt-2">Software Engineer</h4>
+    </div>
+
+    <div class="max-w-prose mx-auto mt-6">
+      <p class="text-gray-700">
+        I am a software engineer based in Atlanta, Georgia. I enjoy working with full-stack teams on value-driven projects. In my spare time, I like building software, speaking about tech, and writing.
+      </p>
+    </div>
+
+    <div class="mt-8">
+      <div class="flex flex-col items-center space-y-4">
+        <div>
+          <h3 class="flex items-center text-lg">
+            <i class="fab fa-medium mr-2"></i>
+            <a href="https://medium.com/@nirespire" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">Articles</a>
+            <span id="dropdown-arrow" class="cursor-pointer ml-2">
+              <i class="fas fa-caret-down"></i>
+            </span>
+          </h3>
+          <div id="post-container" class="hidden mt-2 space-y-2">
+            <!-- Articles will go here -->
+          </div>
+        </div>
+
+        <h3 class="flex items-center text-lg">
+          <i class="fab fa-youtube mr-2"></i>
+          <a href="https://www.youtube.com/playlist?list=PLEes72Fb4Ddh27N8XIbD7RQFaKwxPWCE3" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">Talks</a>
+        </h3>
+        <h3 class="flex items-center text-lg">
+          <i class="fab fa-youtube mr-2"></i>
+          <a href="https://www.youtube.com/playlist?list=PLEes72Fb4DdiRQ1Jxs9AG0ynJUAWJHp5S" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">Live Coding</a>
+        </h3>
+        <h3 class="flex items-center text-lg">
+          <i class="fab fa-twitter mr-2"></i>
+          <a href="https://twitter.com/Nirespire" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">Twitter</a>
+        </h3>
+        <h3 class="flex items-center text-lg">
+          <i class="fab fa-linkedin mr-2"></i>
+          <a href="https://www.linkedin.com/in/sanjaynair8/" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">LinkedIn</a>
+        </h3>
+        <h3 class="flex items-center text-lg">
+          <i class="fab fa-github mr-2"></i>
+          <a href="https://github.com/Nirespire" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">Github</a>
+        </h3>
+        <h3 class="flex items-center text-lg">
+          <i class="fas fa-book mr-2"></i>
+          <a href="https://www.mendeley.com/authors/57192428597/" target="_blank" rel="noopener noreferrer" class="hover:bg-gray-200 hover:text-black">Publications</a>
+        </h3>
+        <h3 class="flex items-center text-lg">
+          <i class="fas fa-envelope mr-2"></i>
+          <a href="mailto:contact@sanjaynair.dev" class="hover:bg-gray-200 hover:text-black">Contact</a>
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const dropdownArrow = document.getElementById('dropdown-arrow');
+    const postContainer = document.getElementById('post-container');
+
+    dropdownArrow.addEventListener('click', () => {
+      const isExpanded = !postContainer.classList.contains('hidden');
+      postContainer.classList.toggle('hidden', isExpanded);
+      dropdownArrow.innerHTML = isExpanded
+        ? '<i class="fas fa-caret-down"></i>'
+        : '<i class="fas fa-caret-up"></i>';
+    });
+  </script>
+</body>
+</html>
